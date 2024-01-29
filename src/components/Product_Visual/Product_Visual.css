@@ -1,0 +1,125 @@
+.ProductVisual {
+    text-align: center;
+    /* height: ; */
+    /* display: flex; */
+}
+
+.ProductVisual-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .ProductVisual-logo {
+        animation: ProductVisual-logo-spin infinite 20s linear;
+    }
+}
+
+.ProductVisual-header {
+    background-color: #000000;
+    height: 26em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+@media screen and (max-width: 750px) {
+    .ProductVisual-header {
+        height: fit-content;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.vertical-bar {
+    height: 60%;
+    width: 5px;
+    background-color: white;
+    transition: all 0.5s ease;
+    margin: 0%;
+}
+
+@media screen and (min-width: 750px) {
+    .ProductVisual:hover .vertical-bar {
+        width: 4px;
+        /* increased width on hover */
+        height: 40%;
+        /* increased height on hover */
+        background-color: lightgray;
+        /* change color on hover */
+    }
+}
+
+.ProductVisual-link {
+    color: #61dafb;
+}
+
+@keyframes ProductVisual-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.underlined-demo-button {
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: white;
+    font-size: inherit;
+    padding: 0;
+    margin: 5px;
+    position: relative;
+}
+
+
+.demo-button {
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: white;
+    font-size: inherit;
+    padding: 0;
+    margin: 5px;
+    position: relative;
+    /* text-decoration: underline; */
+}
+
+.demo-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    /* Adjust as needed */
+    width: 100%;
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: white;
+}
+
+.underlined-demo-button::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    /* Adjust as needed */
+    width: 0;
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: white;
+    transition: width 0.5s ease-in-out;
+    transform: translateX(-50%);
+    /* Center the pseudo-element */
+}
+
+.underlined-demo-button:hover::after {
+    width: 100%;
+    transform: translateX(-50%) scaleX(1);
+    /* Full width, starting from the center */
+}

@@ -1,0 +1,32 @@
+.PD_Background {
+    /* height: 500vh; */
+    width: device-width;
+    background-color: black;
+    /* Just for visibility */
+    /* padding: 20px; */
+    /* make sticky */
+    position: sticky;
+    top: 0;
+    /* make it overlap */
+    z-index: 1;
+
+}
+
+.PD_Background_OutOfView {
+    /* height: 500vh; */
+    width: device-width;
+    background-color: rgb(0, 0, 0);
+    /* Just for visibility */
+    /* padding: 20px; */
+    /* make sticky */
+    position: sticky;
+    top: 0;
+    /* make it overlap */
+    z-index: -1;
+
+}
+
+.Product_Background {
+    background-color: black;
+    min-height: 800vh;
+}

@@ -1,0 +1,226 @@
+.NavBar {
+    text-align: left;
+    position: fixed;
+    z-index: 10;
+}
+
+.NavBar-logo {
+    width: 150px;
+    height: 150px;
+    pointer-events: none;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+/*
+@media (prefers-reduced-motion: no-preference) {
+    .Header-logo {
+        animation: Header-logo-spin infinite 20s linear;
+        animation:none;
+        margin:0;
+        align-items:left
+        
+    }
+}*/
+
+.NavBar-header {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(4px);
+    height: 10%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1em;
+}
+
+.NavBar-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.NavBar-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    background-color: white;
+    /* Color of the line */
+    height: 2px;
+    /* Height of the line */
+    transition: all 0.3s ease;
+    transform: scaleX(0);
+}
+
+.NavBar-button:hover::after {
+    left: 0;
+    right: 0;
+    transform: scaleX(1);
+}
+
+
+.Header-link {
+    color: #61dafb;
+}
+
+.NavBar-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.NavBar-login {
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: 1.5em;
+    background-color: grey;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+
+/*@keyframes Header-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}*/
+
+.hamburger-menu {
+    display: none;
+}
+
+/* Media Query for Tablets and Mobile Phones */
+/*@media screen and (max-width: 768px) {
+    .NavBar-header {
+        justify-content: space-between;
+        padding-left: 0.5em;
+    }
+
+    .NavBar-logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .NavBar-links, .NavBar-login {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        background: transparent;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .expanded {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.9);
+        padding: 10px 0;
+    }
+
+    .NavBar-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+*/
+
+@media screen and (max-width: 768px) {
+    .NavBar-header {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .NavBar-logo {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+
+    .NavBar-links,
+    .NavBar-login {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        background: transparent;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        left: 10px;
+    }
+
+    .expanded {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px 0;
+    }
+
+    .NavBar-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        border-bottom: 1px solid white;
+    }
+
+    .NavBar-button:last-child {
+        border-bottom: none;
+    }
+
+    .NavBar-login {
+        display: block;
+        font-size: 0.8em;
+        padding: 5px 0.5%;
+        max-width: 15%;
+        min-width: 16px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background-color: grey;
+        color: white;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+}
